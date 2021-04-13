@@ -59,6 +59,7 @@ namespace HomeInventory
             this.btnPrint = new System.Windows.Forms.Button();
             this.dlgPreview = new System.Windows.Forms.PrintPreviewDialog();
             this.btnExit = new System.Windows.Forms.Button();
+            this.dlgOpenSQL = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.picItem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,7 +202,6 @@ namespace HomeInventory
             this.lblPhotoFile.Name = "lblPhotoFile";
             this.lblPhotoFile.Size = new System.Drawing.Size(222, 44);
             this.lblPhotoFile.TabIndex = 14;
-            this.lblPhotoFile.Text = "[Blank]";
             // 
             // btnLoadPhoto
             // 
@@ -370,6 +370,11 @@ namespace HomeInventory
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // dlgOpenSQL
+            // 
+            this.dlgOpenSQL.Filter = "SQL Server Databases (*.mdf)|*.mdf";
+            this.dlgOpenSQL.FileOk += new System.ComponentModel.CancelEventHandler(this.dlgOpenSQL_FileOk);
+            // 
             // frmInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -445,6 +450,7 @@ namespace HomeInventory
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.PrintPreviewDialog dlgPreview;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.OpenFileDialog dlgOpenSQL;
     }
 }
 
