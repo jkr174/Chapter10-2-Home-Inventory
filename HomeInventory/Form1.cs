@@ -44,11 +44,11 @@ namespace HomeInventory
                 {
                     // connect to sales database
                     inventoryConnection = new SqlConnection(
-                        "Data Source =.\\SQLEXPRESS; " +
+                        "Data Source = (LocalDB)\\MSSQLLocalDB; " +
                         "AttachDbFilename=" + dlgOpenSQL.FileName + ";" +
                         "Integrated Security=True;" +
                         "Connect Timeout=30;" +
-                        "User Instance=True;");
+                        "User Instance=False;");
                     inventoryConnection.Open();
                     // establish inventory command object
                     inventoryCommand = new SqlCommand(
